@@ -1,0 +1,66 @@
+type Mutation {
+    createSearchRule(input: SearchRuleInput!): SearchRule
+}
+
+type Query {
+    getAllSearchRules: [SearchRule!]!
+    searchRuleById(id: ID!): SearchRule
+}
+
+type SearchRule {
+    maxRoomsLimitation: MaxRoomsLimitation
+    maxNightsLimitation: MaxNightsLimitation
+    maxArrivalDateLimitation: MaxArrivalDateLimitation
+    roomOccupancyLimitations: RoomOccupancyLimitation
+}
+
+type MaxRoomsLimitation {
+    maxRooms: Int
+}
+
+type MaxNightsLimitation {
+    maxNights: Int
+}
+
+type MaxArrivalDateLimitation {
+    maxArrivalDate: Int
+}
+
+type RoomOccupancyLimitation {
+    roomOccupancies: [RoomOccupancy]
+}
+
+type RoomOccupancy {
+    adultsNumber: Int
+    childrenNumber: Int
+    acceptedRoomTypes: [String]
+}
+
+input SearchRuleInput {
+    maxRoomsLimitation: MaxRoomsInput
+    maxNightsLimitation: MaxNightsInput
+    maxArrivalDateLimitation: MaxArrivalDateInput
+    roomOccupancyLimitations: RoomOccupancyInput
+}
+
+input MaxRoomsInput {
+    maxRooms: Int
+}
+
+input MaxNightsInput {
+    maxNights: Int
+}
+
+input MaxArrivalDateInput {
+    maxArrivalDate: Int
+}
+
+input RoomOccupancyInput {
+    roomOccupancies: [RoomOccupancyDetails]
+}
+
+input RoomOccupancyDetails {
+    adultsNumber: Int
+    childrenNumber: Int
+    acceptedRoomTypes: [String]
+}
