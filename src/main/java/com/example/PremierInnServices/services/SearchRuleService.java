@@ -26,6 +26,10 @@ public class SearchRuleService {
         return searchRuleRepository.save(searchRule);
     }
 
+    public SearchRule updateSearchRule(SearchRule searchRule) {
+        return searchRuleRepository.save(searchRule);
+    }
+
     public void deleteSearchRule(SearchRule searchRule) {
         searchRuleRepository.delete(searchRule);
     }

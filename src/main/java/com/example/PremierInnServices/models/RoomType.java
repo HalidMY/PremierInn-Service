@@ -12,11 +12,15 @@ public class RoomType {
     private String type;
     private double pricePerNight;
 
-    public RoomType(String id, String type, double pricePerNight) {}
+    public RoomType() {}
 
-    public String getId() {
-        return id;
+    public RoomType(String id, String type, double pricePerNight) {
+        this.id = id;
+        this.type = type;
+        this.pricePerNight = pricePerNight;
     }
+
+    public String getId() { return id; }
 
     public void setId(String id) {
         this.id = id;

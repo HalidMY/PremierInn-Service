@@ -17,7 +17,12 @@ public class Hotel {
 
     public Hotel() {}
 
-    public Hotel(String name, String location, int totalRooms, int availableRooms) {}
+    public Hotel(String name, String location, int totalRooms, int availableRooms) {
+        this.name = name;
+        this.location = location;
+        this.totalRooms = totalRooms;
+        this.availableRooms = availableRooms;
+    }
 
     public String getId() {
         return id;

@@ -12,7 +12,6 @@ public class SearchRuleInput {
     private MaxArrivalDateLimitation maxArrivalDateLimitation;
     private RoomOccupancyLimitation roomOccupancyLimitations;
 
-    // Getters and setters
     public MaxRoomsLimitation getMaxRoomsLimitation() {
         return maxRoomsLimitation;
     }

@@ -27,5 +27,16 @@ public class SearchRuleController {
         return new SearchRuleResponse(savedRule);
     }
 
+    @PutMapping
+    public SearchRuleResponse updateSearchRule(@RequestBody SearchRule rule) {
+        SearchRule updatedRule = searchRuleService.updateSearchRule(rule);
+        return new SearchRuleResponse(updatedRule);
+    }
+
+    @DeleteMapping
+    public void deleteSearchRule(@RequestBody SearchRule rule) {
+        searchRuleService.deleteSearchRule(rule);
+    }
+
 
 }

@@ -22,12 +22,7 @@ public class HotelService {
         return hotelRepository.findById(id).orElse(null);
     }
 
-    public Hotel saveHotel(Hotel hotel) {
-        return hotelRepository.save(hotel);
-    }
+    public Hotel createHotel(Hotel hotel) { return this.hotelRepository.save(hotel); }
 
-    public void deleteHotel(Hotel hotel) {
-        hotelRepository.delete(hotel);
-    }
-
+    public Hotel updateHotel(Hotel hotel) { return this.hotelRepository.save(hotel); }
 }

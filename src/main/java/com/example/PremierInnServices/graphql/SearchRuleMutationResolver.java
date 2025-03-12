@@ -6,10 +6,10 @@ import com.example.PremierInnServices.services.SearchRuleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.MutationMapping;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
 
-@Component
+@Controller
 public class SearchRuleMutationResolver {
 
     @Autowired
